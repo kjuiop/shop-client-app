@@ -27,14 +27,19 @@ jobs:
       - name: Build Next.js App
         run: npm run build
 
-      - name: Verify build output
+      - name: Setup routes for S3 static hosting
         run: |
-          echo "Build output structure:"
-          ls -la out/
-          echo "Success page:"
-          ls -la out/success/ || echo "Success directory not found"
-          echo "Failure page:"
-          ls -la out/failure/ || echo "Failure directory not found"
+          # success 경로 설정
+          mkdir -p out/success
+          cp out/success.html out/success/index.html
+          # failure 경로 설정
+          mkdir -p out/failure
+          cp out/failure.html out/failure/index.html
+          # 원본 파일 삭제 (선택사항)
+          rm out/success.html out/failure.html
+          echo "Route setup complete:"
+          ls -la out/success/
+          ls -la out/failure/
 
       - name: Upload to S3
         run: |
