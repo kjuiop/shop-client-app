@@ -35,11 +35,16 @@ jobs:
           # failure 경로 설정
           mkdir -p out/failure
           cp out/failure.html out/failure/index.html
-          # 원본 파일 삭제 (선택사항)
-          rm out/success.html out/failure.html
+          # 원본 파일 및 .txt 파일 삭제
+          rm -f out/success.html out/success.txt
+          rm -f out/failure.html out/failure.txt
           echo "Route setup complete:"
+          echo "Success folder contents:"
           ls -la out/success/
+          echo "Failure folder contents:"
           ls -la out/failure/
+          echo "Checking for remaining root files:"
+          ls -la out/ | grep -E "\.(html|txt)$" | grep -E "(success|failure)" || echo "No success/failure files in root (good!)"
 
       - name: Upload to S3
         run: |
