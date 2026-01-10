@@ -71,19 +71,23 @@ export default function Home() {
         </div>
       </section>
 
-      {/* 약관 및 결제 버튼 */}
-      <section className="terms-section">
-        <div className="terms-item">
+      {/* 약관 안내 (카드 밖) */}
+      <div className="terms-outside">
+        <div className="terms-item-outside">
           <span>주문 내용을 확인했으며 결제에 동의합니다.</span>
           <a href="#" className="detail-link">자세히</a>
         </div>
-        <div className="terms-item">
+        <div className="terms-item-outside">
           <span>회원님의 개인정보는 안전하게 관리됩니다.</span>
           <a href="#" className="detail-link">자세히</a>
         </div>
-        <div className="terms-item">
+        <div className="terms-item-outside">
           <span>뭐든사는 통신판매중개자로, 업체 배송 상품의 상품/상품정보/거래 등에 대한 책임은 뭐든사가 아닌 판매자에게 있습니다.</span>
         </div>
+      </div>
+
+      {/* 결제 버튼 */}
+      <section className="terms-section">
         <div className="points-info">토스페이 결제 최대 1,600원 적립</div>
         <button className="payment-button">19,800원 결제하기</button>
       </section>

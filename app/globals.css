@@ -193,9 +193,38 @@ body {
   border-radius: 4px;
 }
 
+/* 약관 안내 (카드 밖) */
+.terms-outside {
+  width: 100%;
+  max-width: 800px;
+  padding: 0 16px;
+  margin-bottom: 12px;
+}
+
+.terms-item-outside {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  font-size: 12px;
+  color: #666;
+  line-height: 1.5;
+  margin-bottom: 12px;
+}
+
+.terms-item-outside span {
+  flex: 1;
+  padding-right: 8px;
+}
+
 /* 약관 및 결제 버튼 섹션 */
 .terms-section {
-  padding-bottom: 24px;
+  background-color: #ffffff;
+  margin-bottom: 8px;
+  padding: 20px 16px;
+  width: 100%;
+  max-width: 800px;
+  border-radius: 12px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
 }
 
 .terms-item {
@@ -227,7 +256,7 @@ body {
 .points-info {
   font-size: 12px;
   color: #0064ff;
-  margin: 16px 0;
+  margin: 0 0 16px 0;
   text-align: center;
 }
 
@@ -241,7 +270,7 @@ body {
   border: none;
   border-radius: 8px;
   cursor: pointer;
-  margin-top: 8px;
+  margin-top: 0;
   transition: background-color 0.2s;
 }
 
