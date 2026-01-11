@@ -46,7 +46,7 @@ body {
 .order-section.card {
   border-radius: 12px;
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
-  margin: 100px auto 8px auto;
+  margin: 8px auto 8px auto;
 }
 
 .section-title {
